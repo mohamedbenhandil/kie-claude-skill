@@ -28,6 +28,14 @@ Verified models so far: `gpt-image-2-5-flare-text-to-image` (`prompt`, `aspect_r
 - Upload a local file: `POST https://kieai.redpandaai.co/api/file-stream-upload` multipart `file=@path`, `uploadPath=images/ref`, `fileName=x.png` -> `data.downloadUrl` (temporary). Pass that URL where the model expects a URL (`image_input`, `image_urls`, ...; check the doc page). Also available: base64 and URL upload (docs: file-upload-api).
 - KNOWN BUG: Nano Banana 2.1 can return the reference image UNCHANGED when `image_input` is given with a "recreate/variation" prompt. After generating, compare file hashes or look at the image; if identical, regenerate text-only (omit `image_input`) with a detailed description. Photo edits that preserve a brand logo worked with `image_input`; still verify the text.
 
+## Claude intelligence layer (what makes this better than raw API calls)
+1. **Pick the model for the user.** If no model is named, choose from the KIE list by need and say why in one line: photoreal/editing, text-in-image or logos, fast drafts, text-to-video vs image-to-video, music, voice. Prefer the cheapest model that fits; ask before expensive jobs (video, 4K, music).
+2. **Rewrite the prompt like a pro.** Never send the raw sentence. Build: subject, setting, style/medium, lighting, lens or art direction, palette (hex), composition (e.g. text space on the left), mood, explicit exclusions ("no text, no watermark"). Video: add camera move, duration, subject motion, start/end frame. Music: genre, tempo, mood, instruments, structure, vocals or instrumental. Voice: language, tone, pacing. Follow the prompt style the model's doc page recommends.
+3. **Read the reference.** When the user sends an image, describe its mood, colors, composition and subject first, then reuse those words in the prompt so the result matches.
+4. **Automate the loop.** Launch variants in parallel, poll until done, download, display, then self-check outputs (spelling, cropping, forbidden elements, identical-to-reference) and regenerate failures once without asking. Offer one concrete next step (more variants, upscale, other ratio) instead of a menu.
+5. **Keep session context.** Reuse the user's chosen model, ratio, palette and uploaded reference URLs for follow-ups ("other style", "darker") without re-asking.
+6. **Be economical.** Show model, resolution, ratio, cost in credits and one line per result.
+
 ## Quality rules learned
 - Optimize the user's prompt (subject, style, palette with hex colors, composition, "no text/logos" when relevant) and use the user's exact model, resolution and ratio.
 - Look at at least one output when text, logos or "no X" constraints matter, and say plainly when something was not checked.

@@ -19,7 +19,7 @@
 
 ## 🇬🇧 English
 
-A **Claude Code skill** that lets Claude generate **images, video, music and voice** with **any model on the [KIE.ai](https://kie.ai) list**, with no setup beyond an API key.
+A **Claude Code skill** that puts **Claude's intelligence, prompting and automation** in front of **every model on the [KIE.ai](https://kie.ai) list**: images, video, music and voice, with no setup beyond an API key.
 
 You give a prompt. Claude **optimizes it**, finds the right KIE model in the official docs, calls the API, waits for the result, downloads it and **shows it right in the conversation**.
 
@@ -27,7 +27,9 @@ You give a prompt. Claude **optimizes it**, finds the right KIE model in the off
 
 | | |
 |---|---|
-| 🧠 **Prompt optimizer** | Turns a rough idea into a precise, model-ready prompt |
+| 🧠 **Smart model choice** | Picks the best-fit, cheapest KIE model when you don't name one |
+| ✍️ **Pro prompting** | Rewrites your idea into a precise prompt: style, light, palette, composition, exclusions |
+| 🔁 **Self-checking automation** | Runs variants in parallel, inspects results, retries failures |
 | 🌐 **Any KIE model** | Reads `docs.kie.ai` to find the model id and its exact parameters, so new models work too |
 | 🖼️ **Inline preview** | Results are displayed large in the chat, ready to review |
 | 🧩 **Reference images** | Auto-uploads your image for image-to-image and edits |
