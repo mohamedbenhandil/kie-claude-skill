@@ -24,3 +24,6 @@ A Claude Code skill to generate images with KIE.ai and see them inline.
 - Éviter les pièges connus (image de référence renvoyée sans changement, texte mal orthographié).
 
 Non affilié à KIE.ai ni à Anthropic. / Not affiliated with KIE.ai or Anthropic.
+
+---
+Auteur / Author : **MOHAMED BENHANDIL** — https://github.com/mohamedbenhandil
