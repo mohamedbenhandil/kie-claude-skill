@@ -112,7 +112,7 @@ Vous donnez un prompt. Claude **l'optimise**, trouve le bon modèle KIE dans la 
 
 <div align="center">
 
-**MOHAMED BENHANDIL** · **BENHAND STUDIO**
+**BENHAND STUDIO**
 
 [![GitHub](https://img.shields.io/badge/GitHub-mohamedbenhandil-181717?style=for-the-badge&logo=github)](https://github.com/mohamedbenhandil)
 
